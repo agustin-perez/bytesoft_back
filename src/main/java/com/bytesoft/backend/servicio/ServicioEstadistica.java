@@ -1,7 +1,7 @@
 package com.bytesoft.backend.servicio;
 
-import com.bytesoft.backend.modelo.Estadistica;
-import com.bytesoft.backend.repositorio.RepositorioEstadistica;
+import com.bytesoft.backend.modelo.ChartPoints;
+import com.bytesoft.backend.repositorio.StatsRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import javax.transaction.Transactional;
@@ -12,9 +12,13 @@ import java.util.List;
 public class ServicioEstadistica {
 
     @Autowired
-    private RepositorioEstadistica repositorioEstadistica;
+    private StatsRepo statsRepo;
 
-    public List<Estadistica> listarEstadisticas(){
-        return repositorioEstadistica.findAll();
+    public List<ChartPoints> masDiagnosticadas(){
+        return statsRepo.masDiagnosticadas();
     }
+    public List<ChartPoints> someQuery(){
+        return statsRepo.someQuery();
+    }
+    public int usuariosActivos() { return statsRepo.usuariosActivos(); }
 }
