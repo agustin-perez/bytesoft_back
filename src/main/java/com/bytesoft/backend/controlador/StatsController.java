@@ -31,13 +31,12 @@ public class StatsController {
 
     private Map<String, Object> getArrayStats(String title, List<ChartPoints> lista){
         HashMap<String, Object> result = new HashMap<>();
-        List<ChartPoints> consultaBD = lista;
         ArrayList<String> xAxis = new ArrayList<>();
         ArrayList<Integer> yAxis = new ArrayList<>();
-        for(ChartPoints var : consultaBD){
+        for(ChartPoints var : lista){
             xAxis.add(var.getX());
         }
-        for(ChartPoints var : consultaBD){
+        for(ChartPoints var : lista){
             yAxis.add(var.getY());
         }
         result.put("yAxis", yAxis);

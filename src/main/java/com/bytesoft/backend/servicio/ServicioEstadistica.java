@@ -20,5 +20,10 @@ public class ServicioEstadistica {
     public List<ChartPoints> someQuery(){
         return statsRepo.someQuery();
     }
+
+    /**
+     * Función encargada de obtener los usuarios activos de la app.
+     * @return Cantidad total de usuarios activos de MediCare.
+     */
     public int usuariosActivos() { return statsRepo.usuariosActivos(); }
 }
