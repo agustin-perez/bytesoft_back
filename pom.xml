@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>Bytesoft</groupId>
 	<artifactId>Backend</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0.0-Alpha</version>
 	<name>Backend</name>
 	<description>Web Application Back-end</description>
 	<packaging>war</packaging>
@@ -43,6 +43,11 @@
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-tomcat</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 			<exclusions>
@@ -59,6 +64,9 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+					<mainClass>com.bytesoft.backend.BytesoftBackApplication.java</mainClass>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>
