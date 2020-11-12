@@ -31,4 +31,7 @@ public interface StatsRepo extends JpaRepository<ChartPoints, Integer> {
 
     @Query(value="select count(*) from usuario where bajalogica = 0", nativeQuery = true)
     int usuariosActivos();
+
+    @Query(value="select urlDato from urlFigma where id=1 limit 1;", nativeQuery = true)
+    String figmaUrl();
 }

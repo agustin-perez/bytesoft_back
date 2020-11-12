@@ -26,4 +26,5 @@ public class ServicioEstadistica {
      * @return Cantidad total de usuarios activos de MediCare.
      */
     public int usuariosActivos() { return statsRepo.usuariosActivos(); }
+    public String getFigmaUrl() { return statsRepo.figmaUrl(); }
 }
